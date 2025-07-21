@@ -2,6 +2,10 @@
 
 Medinexi Pharmaceuticals is a modern, dual-function digital healthcare platform built to streamline medical services and online pharmaceutical purchases. It empowers users with tools to **book doctor appointments** and **order medicines online** from a single, user-friendly interface.
 
+<img width="2528" height="1257" alt="Screenshot 2025-06-13 015229" src="https://github.com/user-attachments/assets/8b6206e4-d486-4075-a521-232cb7f2ce42" />
+
+<img width="1792" height="1156" alt="Screenshot 2025-06-13 015440" src="https://github.com/user-attachments/assets/c299cf86-600b-43a5-8799-1d2cae614a70" />
+
 ---
 
 ## 📌 Problem Statement
