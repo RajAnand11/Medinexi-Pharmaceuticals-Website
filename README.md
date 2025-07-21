@@ -82,9 +82,4 @@ Medinexi Pharmaceuticals bridges the gap between medical service accessibility a
 
 ---
 
-## 👨‍💻 Developed By
-
-**School of Computer Applications & Technology**
-
-> *For queries or collaborations, please contact: support@medinexi.com*
 
