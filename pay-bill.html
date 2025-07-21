@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay My Bill - Medical Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pay-bill.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Enhanced Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Medical Center Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="services.html"><i class="fas fa-stethoscope"></i> Services</a></li>
+                <li><a href="appointment.html"><i class="far fa-calendar-check"></i> Appointments</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="pay-bill.html" class="active"><i class="fas fa-credit-card"></i> Pay Bill</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="appointment.html" class="nav-button">Book Appointment</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="payment-page">
+        <div class="payment-header">
+            <h1><i class="fas fa-credit-card"></i> Pay My Bill</h1>
+            <p>Fast, secure, and convenient online bill payment</p>
+            <div class="security-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>256-bit SSL Encrypted</span>
+            </div>
+        </div>
+
+        <div class="payment-container">
+            <div class="payment-options">
+                <div class="payment-type">
+                    <h2>Payment Options</h2>
+                    <div class="payment-methods">
+                        <button class="method active" data-method="quick-pay">
+                            <i class="fas fa-bolt"></i>
+                            <div class="method-text">
+                                <span>Quick Pay</span>
+                                <small>Pay without an account</small>
+                            </div>
+                        </button>
+                        <button class="method" data-method="account">
+                            <i class="fas fa-user"></i>
+                            <div class="method-text">
+                                <span>Account Login</span>
+                                <small>Access your billing history</small>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quick Pay Form -->
+                <form id="quickPayForm" class="payment-form">
+                    <div class="form-section">
+                        <h3><i class="fas fa-file-invoice"></i> Bill Information</h3>
+                        <div class="form-group">
+                            <label for="account-number">Account Number</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-hashtag"></i>
+                                <input type="text" id="account-number" required placeholder="Enter your account number">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="statement-number">Statement Number</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-file-alt"></i>
+                                <input type="text" id="statement-number" required placeholder="Enter statement number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="payment-amount">Payment Amount</label>
+                            <div class="amount-input">
+                                <span class="currency">$</span>
+                                <input type="number" id="payment-amount" required placeholder="0.00" step="0.01">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section payment-card-details">
+                        <h3><i class="fas fa-credit-card"></i> Card Information</h3>
+                        <div class="card-wrapper">
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <div class="input-with-icon">
+                                    <i class="far fa-credit-card"></i>
+                                    <input type="text" id="card-number" required placeholder="1234 5678 9012 3456">
+                                    <div class="card-type-icon"></div>
+                                </div>
+                            </div>
+
+                            <div class="card-extra-details">
+                                <div class="form-group">
+                                    <label for="expiry">Expiry Date</label>
+                                    <div class="input-with-icon">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <input type="text" id="expiry" required placeholder="MM/YY">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="text" id="cvv" required placeholder="123">
+                                        <div class="cvv-tooltip">
+                                            <i class="fas fa-question-circle"></i>
+                                            <span class="tooltip-text">3 or 4 digits on the back of your card</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="card-name">Name on Card</label>
+                                <div class="input-with-icon">
+                                    <i class="far fa-user"></i>
+                                    <input type="text" id="card-name" required placeholder="Enter name as shown on card">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-payment">
+                        <i class="fas fa-lock"></i>
+                        <span>Pay Securely Now</span>
+                    </button>
+
+                    <div class="form-footer">
+                        <div class="secure-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Your payment information is secure</span>
+                        </div>
+                        <div class="accepted-cards">
+                            <span>We Accept:</span>
+                            <div class="card-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                                <i class="fab fa-cc-discover"></i>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="payment-info">
+                <div class="info-card">
+                    <h3><i class="fas fa-shield-alt"></i> Secure Payment</h3>
+                    <p>Your payment information is encrypted and secure</p>
+                    <div class="security-features">
+                        <div class="feature">
+                            <i class="fas fa-lock"></i>
+                            <span>SSL Encryption</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Server</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Privacy Protected</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card help-section">
+                    <h3><i class="fas fa-question-circle"></i> Need Help?</h3>
+                    <div class="help-content">
+                        <p>Contact our billing department:</p>
+                        <a href="tel:5551234567" class="contact-link">
+                            <i class="fas fa-phone"></i>
+                            <span>(555) 123-4567</span>
+                        </a>
+                        <a href="mailto:billing@medicalcenter.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>billing@medicalcenter.com</span>
+                        </a>
+                        <div class="support-hours">
+                            <i class="far fa-clock"></i>
+                            <div class="hours-text">
+                                <span>Support Hours:</span>
+                                <small>Mon-Fri: 8AM - 6PM</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card faq-section">
+                    <h3><i class="fas fa-info-circle"></i> Quick Tips</h3>
+                    <ul class="faq-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Have your statement ready</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Check card expiration date</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ensure correct billing address</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are committed to providing the highest quality medical care with compassion and excellence.</p>
+                <div class="footer-newsletter">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="doctors.html"><i class="fas fa-chevron-right"></i> Our Doctors</a></li>
+                    <li><a href="appointment.html"><i class="fas fa-chevron-right"></i> Appointments</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    <li><a href="pay-bill.html"><i class="fas fa-chevron-right"></i> Pay Bill</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Medical Center Drive</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@medicalcenter.com</p>
+                <p><i class="far fa-clock"></i> Mon-Fri: 8:00 AM - 8:00 PM</p>
+                <p><i class="far fa-clock"></i> Sat-Sun: 9:00 AM - 5:00 PM</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <p>Follow us on social media for updates and health tips.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Medical Center. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="pay-bill.js"></script>
+</body>
+</html> 

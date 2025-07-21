@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Medinexi Pharmaceuticals</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="main-nav">
+            <div class="logo">
+                <span class="logo-text">Medinexi</span>
+                <span class="logo-highlight">Pharmaceuticals</span>
+            </div>
+            <div class="actions">
+                <button class="care-btn"><i class="fas fa-plus-circle"></i> Get Care Now</button>
+                <a href="#" class="action-link"><i class="fas fa-briefcase"></i> Careers</a>
+                <a href="#" class="action-link"><i class="fas fa-heart"></i> Donate</a>
+                <a href="tel:9137914200" class="phone-link"><i class="fas fa-phone"></i> 913-791-4200</a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="Search for doctors, services, or locations..." />
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="quick-links">
+                <a href="appointment.html" class="quick-link"><i class="fas fa-user-md"></i> Find a Doctor</a>
+                <a href="store.html" class="quick-link"><i class="fas fa-map-marker-alt"></i> Medinexi Store</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-hero">
+            <h1>Contact Us</h1>
+            <p>We're here to help and answer any questions you might have</p>
+        </section>
+
+        <section class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p>123 Medinexi Street</p>
+                    <p>Healthcare District</p>
+                    <p>Your City, State 12345</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Call Us</h3>
+                    <p>Main: (913) 791-4200</p>
+                    <p>Emergency: (913) 791-4100</p>
+                    <p>Toll-free: 1-800-MEDINEXI</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>info@medinexi.com</p>
+                    <p>support@medinexi.com</p>
+                    <p>careers@medinexi.com</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Hours</h3>
+                    <p>Monday - Friday: 8am - 8pm</p>
+                    <p>Saturday: 9am - 6pm</p>
+                    <p>Sunday: 10am - 4pm</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="appointment">Appointment Request</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                <!-- Replace the src with your actual Google Maps embed code -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.3325395304414!2d-122.01116868467422!3d37.33463524513264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb59127ce078f%3A0x18e1c3ce7becf1b!2sApple%20Park!5e0!3m2!1sen!2sin!4v1623456789012!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <script src="home.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html> 

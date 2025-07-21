@@ -1,0 +1,462 @@
+/* Facilities Page Styles */
+:root {
+    --primary: #0077B6;
+    --primary-light: #00B4D8;
+    --text-dark: #2D3748;
+    --text-light: #718096;
+    --background: #F7FAFC;
+    --white: #FFFFFF;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.facilities-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero Section */
+.facilities-hero {
+    position: relative;
+    height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://static.wixstatic.com/media/f02d5f_9807dc1cc512469aa0f733271d6c49ca~mv2.jpeg/v1/fill/w_640,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f02d5f_9807dc1cc512469aa0f733271d6c49ca~mv2.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    width: 80%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease;
+}
+
+/* Overview Section */
+.facilities-overview {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.overview-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.overview-content h2 {
+    color: var(--text-dark);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.overview-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* Key Facilities Section */
+.key-facilities {
+    margin-bottom: 4rem;
+}
+
+.key-facilities h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.facility-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+}
+
+.facility-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.facility-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.facility-card:hover .facility-image img {
+    transform: scale(1.1);
+}
+
+.facility-content {
+    padding: 2rem;
+}
+
+.facility-content h3 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.facility-content p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.facility-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.facility-content ul li {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.facility-content ul li::before {
+    content: "•";
+    color: var(--primary);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+}
+
+/* Specialized Centers Section */
+.specialized-centers {
+    margin-bottom: 4rem;
+    padding: 4rem 0;
+    background: var(--background);
+    border-radius: 20px;
+}
+
+.specialized-centers h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+}
+
+.centers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.center-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.center-item:hover {
+    transform: translateY(-5px);
+}
+
+.center-item i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.center-item h3 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.center-item p {
+    color: var(--text-light);
+}
+
+/* Patient Amenities Section */
+.patient-amenities {
+    margin-bottom: 4rem;
+}
+
+.patient-amenities h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+}
+
+.amenities-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.amenity-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.amenity-item:hover {
+    transform: translateY(-5px);
+}
+
+.amenity-item i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.amenity-item h3 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.amenity-item p {
+    color: var(--text-light);
+}
+
+/* Virtual Tour Section */
+.virtual-tour {
+    background: linear-gradient(rgba(0, 119, 182, 0.9), rgba(0, 180, 216, 0.9)),
+                url('images/virtual-tour-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.tour-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tour-content p {
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.tour-btn {
+    background: var(--white);
+    color: var(--primary);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tour-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Section */
+.facilities-contact {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-content h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.contact-content p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-btn {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.contact-btn:not(.secondary) {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.contact-btn.secondary {
+    background: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .facilities-hero {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .facilities-main {
+        padding: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .overview-content h2,
+    .key-facilities h2,
+    .specialized-centers h2,
+    .patient-amenities h2,
+    .tour-content h2,
+    .contact-content h2 {
+        font-size: 2rem;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .facilities-hero {
+        height: 300px;
+    }
+
+    .stat-item {
+        padding: 1.5rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+} 

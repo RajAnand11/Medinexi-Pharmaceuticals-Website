@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule an Appointment - Medinexi Pharmaceuticals</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="appointment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header>
+        <div class="main-nav">
+            <div class="logo">
+                <span class="logo-text">Medinexi</span>
+                <span class="logo-highlight">Pharmaceuticals</span>
+            </div>
+            <div class="actions">
+                <button class="care-btn"><i class="fas fa-plus-circle"></i> Get Care Now</button>
+                <a href="#" class="action-link"><i class="fas fa-briefcase"></i> Careers</a>
+                <a href="#" class="action-link"><i class="fas fa-heart"></i> Donate</a>
+                <a href="tel:9137914200" class="phone-link"><i class="fas fa-phone"></i> 913-791-4200</a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="Search for doctors, services, or locations..." />
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="quick-links">
+                <a href="store.html" class="quick-link"><i class="fas fa-map-marker-alt"></i> Medinexi Store</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="appointment-main">
+        <section class="appointment-hero">
+            <h1>Schedule an Appointment</h1>
+            <p>Book your visit with our healthcare professionals</p>
+        </section>
+
+        <section class="appointment-container">
+            <div class="appointment-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Select Service</div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Choose Doctor</div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Pick Date & Time</div>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-text">Your Information</div>
+                </div>
+            </div>
+
+            <div class="appointment-content">
+                <!-- Step 1: Select Service -->
+                <div class="step-content active" id="step1">
+                    <h2>Select a Service</h2>
+                    <div class="service-grid">
+                        <div class="service-card" data-service="general">
+                            <i class="fas fa-user-md"></i>
+                            <h3>General Consultation</h3>
+                            <p>Regular check-ups and general health concerns</p>
+                        </div>
+                        <div class="service-card" data-service="specialist">
+                            <i class="fas fa-stethoscope"></i>
+                            <h3>Specialist Consultation</h3>
+                            <p>Specialized medical care and treatment</p>
+                        </div>
+                        <div class="service-card" data-service="diagnostic">
+                            <i class="fas fa-microscope"></i>
+                            <h3>Diagnostic Services</h3>
+                            <p>Tests, scans, and laboratory services</p>
+                        </div>
+                        <div class="service-card" data-service="vaccination">
+                            <i class="fas fa-syringe"></i>
+                            <h3>Vaccination</h3>
+                            <p>Immunizations and preventive care</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Choose Doctor -->
+                <div class="step-content" id="step2">
+                    <h2>Choose Your Doctor</h2>
+                    <div class="doctor-filter">
+                        <label for="specialty-filter">Filter by Specialty:</label>
+                        <select id="specialty-filter">
+                            <option value="">All Specialties</option>
+                            <option value="General Medicine">General Medicine</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Pediatrics">Pediatrics</option>
+                            <option value="Dermatology">Dermatology</option>
+                        </select>
+                    </div>
+                    <div class="doctor-grid">
+                        <!-- Doctor cards will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Step 3: Pick Date & Time -->
+                <div class="step-content" id="step3">
+                    <h2>Select Date & Time</h2>
+                    <div class="datetime-picker">
+                        <div class="date-picker">
+                            <label>Select Date</label>
+                            <input type="text" id="appointment-date" placeholder="Choose date">
+                        </div>
+                        <div class="time-slots">
+                            <label>Available Time Slots</label>
+                            <div class="time-grid">
+                                <!-- Time slots will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Your Information -->
+                <div class="step-content" id="step4">
+                    <h2>Your Information</h2>
+                    <form id="appointmentForm" class="appointment-form">
+                        <div class="form-group">
+                            <label for="fullName" class="required-field">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required 
+                                   pattern="^[a-zA-Z ]{2,50}$" 
+                                   title="Please enter a valid name (2-50 characters, letters only)">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="required-field">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="required-field">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required
+                                       pattern="^\(\d{3}\) \d{3}-\d{4}$"
+                                       title="Please enter a valid phone number: (XXX) XXX-XXXX">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dob" class="required-field">Date of Birth</label>
+                                <input type="date" id="dob" name="dob" required
+                                       max="2024-12-31">
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender">
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer-not">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason" class="required-field">Reason for Visit</label>
+                            <div class="tooltip">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="tooltip-text">Please provide a brief description of your symptoms or reason for the appointment</span>
+                            </div>
+                            <textarea id="reason" name="reason" required
+                                      minlength="10" maxlength="500"
+                                      placeholder="Please describe your symptoms or reason for visit"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="insurance">Insurance Information</label>
+                            <input type="text" id="insurance" name="insurance" 
+                                   placeholder="Insurance provider (if any)">
+                        </div>
+                        <div class="form-group">
+                            <label for="additional-notes">Additional Notes</label>
+                            <textarea id="additional-notes" name="additional-notes"
+                                      placeholder="Any additional information you'd like to share (allergies, medications, etc.)"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="prev-btn" disabled>Previous</button>
+                    <button class="next-btn">Next</button>
+                </div>
+            </div>
+
+            <!-- Appointment Summary -->
+            <div class="appointment-summary">
+                <h3>Appointment Summary</h3>
+                <div class="summary-content">
+                    <div class="summary-item">
+                        <span class="label">Service:</span>
+                        <span class="value" id="summary-service">Not selected</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Doctor:</span>
+                        <span class="value" id="summary-doctor">Not selected</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Date & Time:</span>
+                        <span class="value" id="summary-datetime">Not selected</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="home.js"></script>
+    <script src="appointment.js"></script>
+</body>
+</html> 
